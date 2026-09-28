@@ -1,10 +1,44 @@
 # Secrets - never commit real credentials
 .env
+.env.*
+!.env.example
 
 # User-uploaded files (kept locally / on the server, not in git)
 uploads/*
 !uploads/.htaccess
+!uploads/courses/
+uploads/courses/*
 !uploads/courses/.gitkeep
 
-# Logs
+# Logs and PHP errors
 *.log
+error_log
+php_errors.log
+
+# Dependencies (if you add Composer / npm later)
+/vendor/
+/node_modules/
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups, archives, temp files
+*.bak
+*.tmp
+*.zip
+*.rar
+*.7z
+/tmp/
+/cache/
+
+# Local database dumps with real data (keep only the schema files in database/)
+*.local.sql
+backup*.sql
