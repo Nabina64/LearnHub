@@ -1,0 +1,10 @@
+# Secrets - never commit real credentials
+.env
+
+# User-uploaded files (kept locally / on the server, not in git)
+uploads/*
+!uploads/.htaccess
+!uploads/courses/.gitkeep
+
+# Logs
+*.log

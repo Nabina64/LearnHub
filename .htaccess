@@ -1,0 +1,28 @@
+# Never serve dotfiles (.env, .git, .gitignore, etc.) - .env in
+# particular holds database and SMTP credentials.
+
+<IfModule mod_authz_core.c>
+    <FilesMatch "^\.">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+    <FilesMatch "^\.">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+# Never serve markdown docs or SQL/config files if they end up in
+# the web root on some hosts.
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.(md|sql|log)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+    <FilesMatch "\.(md|sql|log)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>

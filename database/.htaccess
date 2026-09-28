@@ -1,0 +1,11 @@
+# These .sql files are for importing into MySQL by hand and must
+# never be downloadable - they describe (and, for a fresh install,
+# may even contain) the full database schema.
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

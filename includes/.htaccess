@@ -1,0 +1,11 @@
+# These files are only ever meant to be require()'d by pages in the
+# site root / admin / teacher / student folders - never requested
+# directly (they assume $pdo, $_SESSION, etc. already exist).
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

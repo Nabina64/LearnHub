@@ -1,0 +1,1234 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #ffffff;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.home-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 95px 0 110px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(13, 110, 253, 0.12),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fbff 0%,
+            #eef5ff 50%,
+            #ffffff 100%
+        );
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(13, 110, 253, 0.035);
+
+    top: -220px;
+    right: -120px;
+}
+
+.home-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Hero Text */
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #0d6efd;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 20px;
+}
+
+.hero-label span {
+    width: 8px;
+    height: 8px;
+
+    display: inline-block;
+
+    background: #0d6efd;
+
+    border-radius: 50%;
+}
+
+
+.hero-title {
+    margin: 0;
+
+    color: #101828;
+
+    font-size: clamp(45px, 6vw, 76px);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -2.5px;
+}
+
+.hero-title span {
+    color: #0d6efd;
+}
+
+
+.hero-description {
+    max-width: 580px;
+
+    margin-top: 28px;
+
+    color: #667085;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+.hero-btn {
+    padding: 13px 23px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 20px rgba(13, 110, 253, 0.18);
+
+    transition: all 0.3s ease;
+}
+
+.hero-btn span {
+    margin-left: 7px;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(13, 110, 253, 0.25);
+}
+
+.hero-outline-btn {
+    padding: 13px 23px;
+
+    background: #ffffff;
+
+    color: #344054;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.hero-outline-btn:hover {
+    background: #f8fafc;
+
+    border-color: #98a2b3;
+
+    transform: translateY(-2px);
+}
+
+
+/* Hero Trust */
+
+.hero-trust {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 50px;
+}
+
+.trust-item {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.trust-item strong {
+    color: #1d2939;
+
+    font-size: 14px;
+}
+
+.trust-item small {
+    margin-top: 4px;
+
+    color: #98a2b3;
+
+    font-size: 11px;
+}
+
+.trust-line {
+    width: 1px;
+    height: 30px;
+
+    background: #dfe3e8;
+}
+
+
+/* =========================================
+   HERO DASHBOARD
+========================================= */
+
+.hero-visual {
+    position: relative;
+
+    max-width: 510px;
+
+    margin: auto;
+
+    padding: 45px 20px;
+}
+
+
+.learning-dashboard {
+    position: relative;
+    z-index: 2;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf4;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 30px 70px rgba(16, 24, 40, 0.12);
+}
+
+
+/* Dashboard Top */
+
+.dashboard-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+.dashboard-top small {
+    color: #98a2b3;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.dashboard-top h3 {
+    margin: 5px 0 0;
+
+    color: #101828;
+
+    font-size: 27px;
+
+    font-weight: 800;
+}
+
+.dashboard-circle {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf2ff;
+
+    color: #0d6efd;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* Dashboard Main */
+
+.dashboard-main {
+    padding: 28px 0;
+}
+
+.small-title {
+    margin-bottom: 9px;
+
+    color: #0d6efd;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.dashboard-main h4 {
+    margin-bottom: 25px;
+
+    color: #1d2939;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #667085;
+
+    font-size: 12px;
+}
+
+.progress-info strong {
+    color: #0d6efd;
+}
+
+.custom-progress {
+    width: 100%;
+    height: 8px;
+
+    margin-top: 9px;
+
+    overflow: hidden;
+
+    background: #edf2f7;
+
+    border-radius: 20px;
+}
+
+.custom-progress-bar {
+    height: 100%;
+
+    background: #0d6efd;
+
+    border-radius: 20px;
+}
+
+
+/* Dashboard Cards */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.dashboard-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    background: #f8fafc;
+
+    border: 1px solid #edf0f4;
+
+    border-radius: 14px;
+
+    transition: all 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+
+    background: #f4f8ff;
+
+    border-color: #dbe7fa;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #eaf2ff;
+
+    color: #0d6efd;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.dashboard-card strong,
+.dashboard-card small {
+    display: block;
+}
+
+.dashboard-card strong {
+    color: #344054;
+
+    font-size: 13px;
+}
+
+.dashboard-card small {
+    margin-top: 3px;
+
+    color: #98a2b3;
+
+    font-size: 10px;
+}
+
+
+/* Floating Cards */
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 12px 30px rgba(16, 24, 40, 0.10);
+
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.floating-card strong,
+.floating-card small {
+    display: block;
+}
+
+.floating-card strong {
+    color: #344054;
+
+    font-size: 12px;
+}
+
+.floating-card small {
+    margin-top: 2px;
+
+    color: #98a2b3;
+
+    font-size: 9px;
+}
+
+.floating-top {
+    top: 5px;
+    right: -5px;
+}
+
+.floating-bottom {
+    bottom: 5px;
+    left: -5px;
+
+    animation-delay: 1s;
+}
+
+.floating-icon,
+.success-icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #eaf7ef;
+
+    color: #198754;
+
+    font-weight: 800;
+}
+
+.success-icon {
+    background: #eaf2ff;
+
+    color: #0d6efd;
+}
+
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* =========================================
+   FEATURES SECTION
+========================================= */
+
+.features-section {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: #0d6efd;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin-top: 12px;
+
+    color: #101828;
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    margin-top: 15px;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* Feature Card */
+
+.modern-feature {
+    position: relative;
+
+    height: 100%;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7ebf0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.modern-feature:hover {
+    transform: translateY(-8px);
+
+    border-color: #cfe0fa;
+
+    box-shadow:
+        0 20px 45px rgba(16, 24, 40, 0.09);
+}
+
+.feature-number {
+    color: #98a2b3;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.feature-symbol {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 25px;
+
+    background: #eef5ff;
+
+    color: #0d6efd;
+
+    border-radius: 13px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.modern-feature h4 {
+    margin-top: 24px;
+
+    color: #1d2939;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.modern-feature p {
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.process-section {
+    padding: 100px 0;
+
+    background: #f7f9fc;
+}
+
+.process-section .section-heading {
+    margin-bottom: 0;
+
+    text-align: left;
+}
+
+.process-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.process-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7ebf0;
+
+    border-radius: 17px;
+
+    transition: all 0.3s ease;
+}
+
+.process-item:hover {
+    transform: translateX(5px);
+
+    border-color: #d5e3f8;
+
+    box-shadow:
+        0 12px 30px rgba(16, 24, 40, 0.07);
+}
+
+.process-number {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #eaf2ff;
+
+    color: #0d6efd;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.process-item h5 {
+    margin: 2px 0 7px;
+
+    color: #1d2939;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+.process-item p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-wrapper {
+    padding: 90px 0;
+
+    background: #ffffff;
+}
+
+.cta-box {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    overflow: hidden;
+
+    padding: 55px 60px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #0d6efd,
+            #084298
+        );
+
+    color: #ffffff;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(13, 110, 253, 0.18);
+}
+
+.cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -130px;
+    top: -150px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 50%;
+}
+
+.cta-box > div {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-box span {
+    color: rgba(255,255,255,0.75);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.cta-box h2 {
+    margin-top: 10px;
+
+    font-size: 32px;
+
+    font-weight: 800;
+}
+
+.cta-box p {
+    margin: 10px 0 0;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 15px;
+}
+
+.cta-button {
+    position: relative;
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    padding: 13px 22px;
+
+    background: #ffffff;
+
+    color: #0d6efd;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.cta-button span {
+    margin-left: 7px;
+
+    color: #0d6efd;
+
+    font-size: 16px;
+}
+
+.cta-button:hover {
+    background: #f1f5f9;
+
+    color: #084298;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   OLD COURSE CARD SUPPORT
+========================================= */
+
+.course-card {
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .home-hero {
+        padding: 75px 0 90px;
+    }
+
+    .hero-title {
+        font-size: 55px;
+    }
+
+    .hero-visual {
+        margin-top: 50px;
+    }
+
+    .process-section .section-heading {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .cta-box {
+        padding: 45px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .home-hero {
+        padding: 55px 0 70px;
+    }
+
+    .hero-title {
+        font-size: 44px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-trust {
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+    .trust-line {
+        display: none;
+    }
+
+    .trust-item small {
+        font-size: 9px;
+    }
+
+    .hero-visual {
+        padding: 35px 10px;
+    }
+
+    .learning-dashboard {
+        padding: 23px;
+    }
+
+    .floating-top {
+        right: 0;
+    }
+
+    .floating-bottom {
+        left: 0;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .features-section,
+    .process-section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .cta-wrapper {
+        padding: 60px 0;
+    }
+
+    .cta-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 40px 30px;
+    }
+
+    .cta-box h2 {
+        font-size: 27px;
+    }
+}
+
+/* =========================================================
+   LEARNHUB GLOBAL LIGHT / PROFESSIONAL UI
+   Keeps the existing homepage design while replacing
+   heavy dark navigation/footer elements across the site.
+========================================================= */
+
+:root {
+    --lh-primary: #2563eb;
+    --lh-primary-dark: #1d4ed8;
+    --lh-text: #1f2937;
+    --lh-muted: #667085;
+    --lh-border: #e7ecf3;
+    --lh-surface: #ffffff;
+    --lh-soft: #f7f9fc;
+    --lh-soft-blue: #eff6ff;
+}
+
+/* Sticky footer layout: short pages keep the footer at the bottom */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f8fafc;
+    color: var(--lh-text);
+}
+
+body > .navbar {
+    flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------
+   LIGHT NAVBAR
+--------------------------------------------------------- */
+
+.learnhub-navbar {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border-bottom: 1px solid #e9eef5;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    position: relative;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.learnhub-navbar .navbar-brand {
+    color: #1d4ed8 !important;
+    letter-spacing: -0.3px;
+}
+
+.learnhub-navbar .nav-link {
+    color: #475467 !important;
+    font-weight: 500;
+    padding: 8px 11px !important;
+    border-radius: 9px;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.learnhub-navbar .nav-link:hover,
+.learnhub-navbar .nav-link:focus {
+    color: var(--lh-primary) !important;
+    background: #f3f7ff;
+}
+
+.learnhub-navbar .navbar-toggler {
+    border: 1px solid #dbe3ef;
+    border-radius: 9px;
+    padding: 7px 9px;
+}
+
+.learnhub-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .10);
+}
+
+.learnhub-navbar .btn-primary {
+    border: 0;
+    border-radius: 9px;
+    box-shadow: 0 5px 14px rgba(37, 99, 235, .16);
+}
+
+.learnhub-navbar .btn-danger {
+    border: 0;
+    border-radius: 9px;
+}
+
+/* ---------------------------------------------------------
+   LIGHT FOOTER
+--------------------------------------------------------- */
+
+.learnhub-footer {
+    width: 100%;
+    margin-top: auto !important;
+    padding: 25px 0;
+    background: #ffffff;
+    color: #667085;
+    border-top: 1px solid #e8edf3;
+    box-shadow: 0 -4px 18px rgba(15, 23, 42, 0.025);
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-brand {
+    color: #1f2937;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.footer-copy,
+.learnhub-footer small {
+    color: #98a2b3;
+    font-size: 12px;
+}
+
+/* ---------------------------------------------------------
+   COMMON LIGHT CARD POLISH
+--------------------------------------------------------- */
+
+.card {
+    border-color: var(--lh-border);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.045);
+}
+
+.card-header {
+    border-bottom-color: var(--lh-border);
+}
+
+.lesson-card-header {
+    background: #f8fbff !important;
+    color: #344054 !important;
+    border-bottom: 1px solid #e4ebf5 !important;
+    font-weight: 600;
+}
+
+.soft-dark-badge {
+    background: #eef2f7 !important;
+    color: #475467 !important;
+    border: 1px solid #dce3ec;
+}
+
+/* Softer page surfaces where Bootstrap's white cards are used */
+.table {
+    --bs-table-border-color: #e8edf3;
+}
+
+.form-control,
+.form-select {
+    border-color: #dbe3ec;
+    border-radius: 9px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #9dbcf5;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .10);
+}
+
+/* Avoid heavy black/dark Bootstrap components on ordinary pages */
+.bg-dark {
+    background-color: #eef2f7 !important;
+}
+
+.text-white {
+    color: #344054 !important;
+}
+
+/* Exception: CTA and other intentionally colored components retain
+   their own specific styling because they are part of the design. */
+
+@media (max-width: 767px) {
+    .learnhub-navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .learnhub-navbar .navbar-collapse {
+        padding-top: 10px;
+    }
+
+    .learnhub-navbar .nav-link {
+        margin: 2px 0;
+    }
+
+    .learnhub-navbar .btn {
+        margin-top: 5px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
