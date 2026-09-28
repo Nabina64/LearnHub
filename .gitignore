@@ -42,3 +42,5 @@ desktop.ini
 # Local database dumps with real data (keep only the schema files in database/)
 *.local.sql
 backup*.sql
+
+SECURITY.md
