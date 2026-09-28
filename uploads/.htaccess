@@ -1,0 +1,40 @@
+# Uploaded files are only ever images, but this is a second line of
+# defense in case a malicious file ever ends up in this folder.
+
+# Never allow directory listing - visitors should not be able to
+# browse the full list of uploaded files.
+Options -Indexes -ExecCGI
+Options -MultiViews
+
+# Apache 2.4+
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.(php|php\d|phtml|phar|pl|py|cgi|sh|asp|aspx|exe)$">
+        Require all denied
+    </FilesMatch>
+
+    # Belt-and-braces against double extensions like shell.php.jpg
+    <FilesMatch "\.php\.">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# Apache 2.2 and older
+<IfModule !mod_authz_core.c>
+    <FilesMatch "\.(php|php\d|phtml|phar|pl|py|cgi|sh|asp|aspx|exe)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+
+    <FilesMatch "\.php\.">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+# Belt-and-braces: even if handlers are misconfigured, never execute PHP here.
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>

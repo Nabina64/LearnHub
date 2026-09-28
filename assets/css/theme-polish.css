@@ -1,0 +1,229 @@
+/* =========================================================
+   LEARNHUB — MODERN NAVY + SOFT LIGHT THEME
+   Global polish: keeps content intact while improving visual
+   hierarchy, spacing, cards, navigation and footer placement.
+========================================================= */
+:root {
+    --lh-navy: #182842;
+    --lh-navy-2: #223858;
+    --lh-blue: #3b6ff5;
+    --lh-blue-soft: #edf3ff;
+    --lh-surface: #ffffff;
+    --lh-page: #f6f8fc;
+    --lh-border: #e4eaf2;
+    --lh-text: #172033;
+    --lh-muted: #667085;
+    --lh-shadow: 0 10px 30px rgba(28, 45, 74, .07);
+}
+
+html, body { min-height: 100%; }
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--lh-page);
+    color: var(--lh-text);
+}
+body > .navbar { flex-shrink: 0; }
+
+/* ---------- NAVBAR ---------- */
+.learnhub-navbar {
+    background: linear-gradient(110deg, #182842 0%, #203554 100%) !important;
+    border: 0 !important;
+    box-shadow: 0 5px 22px rgba(19, 35, 59, .16) !important;
+    padding: 12px 0 !important;
+    position: relative;
+    z-index: 1030;
+}
+.learnhub-navbar .navbar-brand {
+    color: #fff !important;
+    font-size: 22px;
+    font-weight: 800 !important;
+    letter-spacing: -.45px;
+}
+.learnhub-navbar .navbar-brand::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, #7fa5ff, #b6c9ff);
+    box-shadow: 5px 0 0 rgba(127,165,255,.28);
+    vertical-align: 1px;
+}
+.learnhub-navbar .nav-link {
+    color: rgba(255,255,255,.82) !important;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 12px !important;
+    border-radius: 9px;
+    transition: .2s ease;
+}
+.learnhub-navbar .nav-link:hover,
+.learnhub-navbar .nav-link:focus {
+    color: #fff !important;
+    background: rgba(255,255,255,.09);
+}
+.learnhub-navbar .navbar-toggler {
+    border: 1px solid rgba(255,255,255,.24) !important;
+    border-radius: 9px;
+    padding: 7px 9px;
+}
+.learnhub-navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+.learnhub-navbar .btn-primary {
+    background: linear-gradient(135deg, #4c7dff, #3568e9) !important;
+    border: 0 !important;
+    border-radius: 9px;
+    box-shadow: 0 7px 18px rgba(49, 98, 221, .28);
+}
+.learnhub-navbar .btn-danger {
+    border: 0 !important;
+    border-radius: 9px;
+}
+
+/* ---------- PAGE SURFACES ---------- */
+.container, .container-fluid { --bs-gutter-x: 1.5rem; }
+.card {
+    border: 1px solid var(--lh-border) !important;
+    border-radius: 15px !important;
+    box-shadow: var(--lh-shadow);
+    overflow: hidden;
+}
+.card-header {
+    background: #fbfcfe;
+    border-bottom: 1px solid var(--lh-border) !important;
+}
+.table {
+    --bs-table-border-color: var(--lh-border);
+}
+.table thead th {
+    color: #526075;
+    font-size: 12px;
+    font-weight: 700;
+    background: #f8faff;
+    border-bottom-width: 1px;
+}
+.form-control, .form-select {
+    border-color: #d9e1ec;
+    border-radius: 10px;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #91aff3;
+    box-shadow: 0 0 0 3px rgba(59,111,245,.11);
+}
+
+/* Keep Bootstrap semantic colors, but soften secondary/dark UI blocks. */
+.bg-dark {
+    background: linear-gradient(135deg, #1e3150, #2b4568) !important;
+}
+.bg-secondary {
+    background: #eef3fb !important;
+    color: #3b4b63 !important;
+}
+.text-white { color: #fff !important; }
+.bg-secondary.text-white { color: #3b4b63 !important; }
+
+/* Gentle buttons */
+.btn { border-radius: 9px; font-weight: 600; }
+.btn-primary {
+    background: linear-gradient(135deg, #4777f5, #3568e9);
+    border-color: #3568e9;
+}
+.btn-primary:hover { filter: brightness(.97); transform: translateY(-1px); }
+.btn-outline-primary { border-color: #a9bff2; color: #3568d8; }
+.btn-outline-primary:hover { background: var(--lh-blue-soft); color: #2f5ec7; border-color: #86a6ed; }
+
+/* ---------- FOOTER ---------- */
+.learnhub-footer {
+    width: 100%;
+    margin-top: auto !important;
+    padding: 42px 0 18px;
+    color: rgba(255,255,255,.74);
+    background: linear-gradient(135deg, #182842 0%, #223858 100%);
+    border-top: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 -8px 28px rgba(21,36,60,.08);
+}
+.learnhub-footer .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 34px;
+    padding-bottom: 30px;
+}
+.learnhub-footer .footer-brand {
+    margin: 0 0 9px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -.3px;
+}
+.learnhub-footer .footer-description {
+    max-width: 330px;
+    margin: 0;
+    color: rgba(255,255,255,.65);
+    font-size: 13px;
+    line-height: 1.75;
+}
+.learnhub-footer .footer-title {
+    margin: 2px 0 12px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+.learnhub-footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.learnhub-footer .footer-links a {
+    color: rgba(255,255,255,.67);
+    text-decoration: none;
+    font-size: 12px;
+    transition: .2s ease;
+}
+.learnhub-footer .footer-links a:hover { color: #fff; transform: translateX(2px); }
+.learnhub-footer .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 17px;
+    border-top: 1px solid rgba(255,255,255,.10);
+}
+.learnhub-footer .footer-copy,
+.learnhub-footer .footer-bottom a {
+    color: rgba(255,255,255,.52);
+    font-size: 11px;
+    text-decoration: none;
+}
+.learnhub-footer .footer-bottom a:hover { color: #fff; }
+
+/* ---------- SOFT BADGES ---------- */
+.soft-dark-badge {
+    background: #eef2f8 !important;
+    color: #526075 !important;
+    border: 1px solid #dde5ef;
+}
+
+/* ---------- PREVENT FOOTER FROM SITTING MID-CONTENT ---------- */
+body > .learnhub-footer { margin-top: auto !important; }
+
+@media (max-width: 991px) {
+    .learnhub-navbar .navbar-collapse {
+        margin-top: 10px;
+        padding: 8px;
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.09);
+        border-radius: 12px;
+    }
+    .learnhub-navbar .nav-link { margin: 2px 0; }
+    .learnhub-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 575px) {
+    .learnhub-footer { padding-top: 32px; }
+    .learnhub-footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 25px 18px; }
+    .learnhub-footer .footer-grid > :first-child { grid-column: 1 / -1; }
+    .learnhub-footer .footer-bottom { flex-direction: column; align-items: flex-start; gap: 7px; }
+}

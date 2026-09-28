@@ -1,0 +1,10 @@
+# These files hold database credentials and are only ever meant to
+# be require()'d by other PHP scripts - never requested directly.
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
